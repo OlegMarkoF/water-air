@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Currents | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Horizontal Currents: The Invisible Rivers of the Ocean</h1>
+      <p>Wind patterns are the primary driver behind the movement of massive volumes of ocean water. When winds blow persistently in one direction, friction builds up at the sea surface, setting the upper layers of the ocean in motion. For example, the trade winds generate currents that flow from east to west. Between the trade-wind belts lies a nearly windless region known as the equatorial doldrums.</p>
+      <p>On either side of the equator, currents form vast circular systems called ocean gyres. The Atlantic, Pacific, and Indian Oceans each contain two major gyres — one in the Northern Hemisphere and one in the Southern Hemisphere — driven primarily by the Earth’s rotation and the Coriolis effect.</p>
+
+      <div class="card">
+        <h3>Gaspard-Gustave de Coriolis (1792–1843)</h3>
+        <p>French mathematician, physicist, and mechanical engineer. He demonstrated that the Earth acts as a rotating frame of reference in which any moving object experiences an apparent acceleration. This gives rise to an inertial force that deflects moving objects to the right in the Northern Hemisphere and to the left in the Southern Hemisphere — the Coriolis force.</p>
+      </div>
+
+      <div class="card">
+        <h3>What Happened to the Plastic Ducks?</h3>
+        <p>In 1992, a shipping container holding roughly 28,000 plastic bath toys washed overboard in the North Pacific. Over the next 20 years this flotilla drifted with the currents. Most settled into the Great Pacific Garbage Patch. These items became ocean tracers — tools used to study currents.</p>
+      </div>
+
+      <h2>Featured on the Map</h2>
+      <ul>
+        <li>Labrador Current — carried the iceberg that sank the Titanic</li>
+        <li>Gulf Stream — warmest and most powerful surface current</li>
+        <li>North Pacific Gyre currents (California, North Equatorial, Kuroshio, North Pacific) — centre of the Great Pacific Garbage Patch</li>
+        <li>Antarctic Circumpolar Current — widest, coldest, longest, largest volume, only current to encircle an entire continent</li>
+        <li>Cape Hatteras — “Graveyard of the Atlantic”</li>
+      </ul>
+
+      <h2>What Lies Beneath the Surface?</h2>
+      <p>In the second half of the 20th century scientists discovered large-scale subsurface and deep countercurrents that flow opposite to surface currents and often exceed them in volume. Examples: Lomonosov Current (Atlantic), Cromwell Current (Pacific), Tareev Current (Indian).</p>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>水平运动，（或）海洋中看不见的河流</h1>
+      <p>风向是驱动巨量海水移动的主要原因。当气流长期保持固定方向，会在海洋表面产生摩擦力，带动表层海水流动。例如信风作用下会形成自东向西的洋流。信风带之间，存在一片几乎无风的区域 —— 赤道无风带。</p>
+      <p>赤道两侧的洋流形成环形环流，即大洋环流。大西洋、太平洋、印度洋各拥有两组环流，南北半球各一组。环流形成的主要诱因是地球自转与科里奥利力。</p>
+
+      <div class="card">
+        <h3>古斯塔夫·加斯帕尔·科里奥利（1792–1843）</h3>
+        <p>法国数学家、力学家、工程师。证明地球属于转动参考系，运动物体会获得附加加速度。由此产生的惯性力，使北半球运动物体向右偏转，南半球向左偏转，这就是科里奥利力。</p>
+      </div>
+
+      <div class="card">
+        <h3>塑料小黄鸭遭遇了什么？</h3>
+        <p>北太平洋一艘货轮失事，一个装有约28,000件塑料玩具的集装箱坠入海中。此后二十年间，这支“玩具大军”跟随洋流四处漂泊。大多数玩具定居在太平洋大垃圾带。这些物品不由自主地成为了示踪器——研究洋流的工具。</p>
+      </div>
+
+      <h2>地图标注洋流</h2>
+      <ul>
+        <li>致使泰坦尼克号沉没的冰山来源洋流 —— 拉布拉多洋流</li>
+        <li>世界大洋温度最高、势力最强的表层洋流 —— 墨西哥湾暖流</li>
+        <li>北太平洋环流系统洋流；该组洋流污染最重，中心即为太平洋大垃圾带</li>
+        <li>纪录创造者：全球最宽、温度最低、流程最长、流量最大、唯一环绕整块大陆的洋流 —— 南极绕极流</li>
+        <li>大西洋坟场：哈特拉斯角附近海域</li>
+      </ul>
+
+      <h2>深海之下藏着什么？</h2>
+      <p>二十世纪下半叶，人类对深层水动力学的认知彻底改写：科学家发现次表层与深层大规模逆流。例如：罗蒙诺索夫洋流（大西洋）、克伦威尔洋流（太平洋）、塔列耶夫洋流（印度洋）。</p>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

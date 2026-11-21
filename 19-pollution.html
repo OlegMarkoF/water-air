@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Pollution? | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>What is Pollution?</h1>
+      <p>Pollution is anything in the wrong place, at the wrong time, and in the wrong amount. Environmental contamination can occur naturally — through events like floods or volcanic eruptions — or as a result of human activity.</p>
+      <p>Pollutants are chemical compounds whose concentrations exceed critical thresholds, entering the environment faster than an ecosystem can transform or assimilate them. Scientists rely on the concept of maximum permissible concentration (MPC).</p>
+
+      <div class="card">
+        <h3>Ocean Pollution</h3>
+        <p>Primary pollutants: oil, plastics, heavy metals, pesticides, untreated wastewater. Largest share originates from land-based river runoff; atmospheric deposition ranks second; localized sources (sewage, dumping, industrial runoff) third. Pollutants concentrate largely in coastal zones and the upper surface layer, then can be transported across vast distances and into the deep ocean.</p>
+      </div>
+      <div class="card">
+        <h3>Atmospheric Pollution</h3>
+        <p>Primary pollutants: greenhouse gases, sulphur dioxide, particulate matter, smog. Highly mobile; affects virtually every component of the environment. In 2016, 91% of the world’s population lived in areas where air pollution exceeded safe guideline limits.</p>
+      </div>
+      <div class="card">
+        <h3>Physical, Chemical & Biological Pollution</h3>
+        <p>Physical: changes in temperature, noise, light, radiation, electromagnetic fields.<br>
+        Chemical: substances foreign to an ecosystem (e.g. heavy metals, synthetic compounds).<br>
+        Biological: non-native species, viruses, parasites, pathogens.</p>
+      </div>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>什么是污染？</h1>
+      <p>污染，就是物质出现在错误的地点、错误的时间，并且超出合理的数量。环境污染既可以由自然过程造成（洪水、火山喷发等），也可以源于人类活动。</p>
+      <p>污染物，即各类化学化合物，其浓度超过临界标准，流入环境的速度超过生态系统自身转化、消解吸收的速度。评估污染时会用到最大容许浓度这一概念。</p>
+
+      <div class="card">
+        <h3>海洋污染</h3>
+        <p>世界海洋的主要污染物：石油、塑料、重金属、杀虫剂、未经处理的生活污水。绝大部分污染物经由陆地河流汇入海洋；其次是大气沉降；第三位是本地污染源。大部分集中在近海海域与海水上层，之后可被输送至遥远海域和海洋深层。</p>
+      </div>
+      <div class="card">
+        <h3>大气污染</h3>
+        <p>大气主要污染物包括温室气体、二氧化硫、粉尘、光化学烟雾。大气污染具备流动性，会在广大范围内几乎影响环境全部组成要素。2016年，全球91%人口居住在空气污染超标的区域。</p>
+      </div>
+      <div class="card">
+        <h3>物理性、化学性与生物性污染</h3>
+        <p>物理性：温度、噪声、光照、辐射、电磁场等参数的变化。<br>
+        化学性：向生态系统输入本身不存在或数量异常的物质（例如重金属）。<br>
+        生物性：动植物意外入侵、病毒、寄生虫、致病微生物的传播。</p>
+      </div>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

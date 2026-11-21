@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Law of the Sea | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Law of the Sea</h1>
+      <blockquote class="quote">
+        To know the laws is not to be familiar with their phraseology, but with their force and effect.
+        <cite>Latin proverb</cite>
+      </blockquote>
+      <p>Humanity naturally strives to bring order to the information around us so we can make sense of the world. We establish rules and define boundaries so that future generations know how to act and can better navigate the world they inherit. Legal frameworks govern far more than human relationships and material property; international conventions also regulate human behaviour and our impact on the environment — setting strict standards for emissions, wastewater treatment, and habitat conservation. Unfortunately, only a small fraction of the world’s population is even aware that these agreements exist.</p>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>海洋法</h1>
+      <blockquote class="quote">
+        通晓法律，不在于熟记法条文字，而在于领会法律的精神要义。
+        <cite>拉丁谚语</cite>
+      </blockquote>
+      <p>人类会对周遭信息加以梳理归纳，以此更好地认知世界。人们制定规则、划定边界，让后代知晓应当如何行事，从而更好地适应周遭环境。法律规范不只调整人与人之间的关系、处理物质财产相关事务；同样也存在各类公约，用以约束人类行为、规范人类对环境造成的影响，例如排放标准、净化处理、环境保护等相关准则。遗憾的是，地球上只有少数人知晓这些公约的存在。</p>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

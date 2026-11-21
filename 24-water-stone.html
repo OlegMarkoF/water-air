@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water and Stone | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Water and Stone</h1>
+      <p>At first glance, water and stone seem entirely incompatible — yet water can be bound within the very minerals and rocks that make up Earth’s solid outer shell, the lithosphere. How is this possible? After all, if we grind opal, azurite, talc or malachite into a fine powder, we won’t squeeze out a single drop of liquid! Yet according to their chemical formulas, these and many other minerals can contain anywhere from 5% to 50% water. The secret lies in the unique states and forms this water takes.</p>
+      <div class="card">
+        <h3>Constitutional water</h3>
+        <p>Exists as hydroxide ions (OH⁻) — or, in rare cases, hydrogen ions (H⁺) — occupying specific positions within the crystal structure. Tightly bound and released only when heated to 300–1,000 °C, a process that destroys the mineral’s crystal lattice.</p>
+      </div>
+      <div class="card">
+        <h3>Molecular water</h3>
+        <p>Present as clusters or individual H₂O molecules integrated into the structure or filling voids (cages, channels, interlayer spaces). Minerals can also contain water of an intermediate nature.</p>
+      </div>
+      <p>The water column itself is both a source and an environment for rock formation. Most chemical sedimentary rocks (halite, anhydrite) form when mineral compounds precipitate out of natural waters. These environments also promote the accumulation and compaction of fine particles, giving rise to limestones, opokas, dolomites, sandstones and siltstones. Underwater magma eruptions produce extrusive igneous rocks such as basalts and andesites. By analysing the chemical composition of rocks, scientists can shed light on remarkable chapters of our planet’s distant past.</p>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>水与岩石</h1>
+      <p>水和岩石看似完全互不相容，但水可以赋存于构成地球坚硬外壳——岩石圈的各类矿物与岩石当中。这怎么可能呢？毕竟，如果我们把蛋白石、蓝铜矿、滑石或者孔雀石研磨成粉末，连一滴液态水都得不到！但按照化学分子式计算，这些矿物以及许多其他矿物当中，水的占比可达5%‑50%。奥秘在于，水是以特殊的状态与形态存在其中。</p>
+      <div class="card">
+        <h3>结构水</h3>
+        <p>以氢氧根离子（OH⁻）的形式存在，少数情况下以氢离子 H⁺的形式占据晶体结构中的特定位置。它被牢固地束缚着，只有在加热到300至1000°C时才会释放出来，但这个过程伴随着矿物晶格的破坏。</p>
+      </div>
+      <div class="card">
+        <h3>分子水</h3>
+        <p>以水分子基团或者独立H₂O水分子的形式，进入矿物结构内部或是充填矿物孔隙（晶胞、孔道、层间空隙）。部分矿物中还存在介于上述两种类型之间的过渡形态水。</p>
+      </div>
+      <p>水体既是岩石形成的物质来源，也是其形成环境。大部分化学沉积岩，例如石盐、硬石膏，都是天然水体中的矿物化合物沉淀之后形成。水环境还促使细小碎屑颗粒堆积、压实，由此生成石灰岩、硅藻土、白云岩、砂岩、粉砂岩。岩浆在海底喷发则会形成喷出岩，例如玄武岩、安山岩。研究岩石的化学成分，能够帮助我们揭开这颗行星远古时代的诸多奇妙真相。</p>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

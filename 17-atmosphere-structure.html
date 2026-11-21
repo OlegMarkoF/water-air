@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structure of the Atmosphere | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Structure of the Atmosphere</h1>
+      <p>With altitude, the atmosphere’s chemical composition, pressure, density, temperature and other physical properties change. Based on these changes it is divided into several spheres separated by transition zones known as pauses.</p>
+
+      <div class="card">
+        <h3>Troposphere</h3>
+        <p>Upper boundary ≈ 8–18 km · Temperature decreases 5–6 °C/km to −50…−60 °C · ~80% of total atmospheric mass · ~90% of atmospheric water vapour</p>
+      </div>
+      <div class="card">
+        <h3>Stratosphere</h3>
+        <p>Upper boundary ≈ 50 km · Temperature −56.5 °C up to 25 km, then rises to ~0.8 °C · ~20% of total mass · Very low water vapour · Houses the ozone layer</p>
+      </div>
+      <div class="card">
+        <h3>Mesosphere</h3>
+        <p>Upper boundary ≈ 80–90 km · Temperature decreases 2.5–3 °C/km to −90 °C · ~0.3% of total mass · Photochemical processes produce airglow</p>
+      </div>
+      <div class="card">
+        <h3>Thermosphere</h3>
+        <p>Upper boundary up to 800 km · Temperature rises to ~1,200 °C by 200–300 km · ~0.05% of total mass · Protective shield against meteoroids · Region of auroras</p>
+      </div>
+      <div class="card">
+        <h3>Exosphere</h3>
+        <p>Upper boundary ≈ 2,000–3,000 km · Temperature may reach 2,000 °C · Zone of dissipation</p>
+      </div>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>大气结构</h1>
+      <p>大气的化学成分、气压、密度、温度以及其他物理性质，均会随高度发生变化。依据这些变化特征，大气划分为若干圈层；圈层之间是过渡层，即各类“层顶”。</p>
+
+      <div class="card">
+        <h3>对流层</h3>
+        <p>上界高度 ≈ 8–18 公里 · 温度每公里下降 5–6 °C，直至 −50 至 −60 °C · 约占大气总质量的 80% · 约占大气水汽的 90%</p>
+      </div>
+      <div class="card">
+        <h3>平流层</h3>
+        <p>上界高度 ≈ 50 公里 · 温度在 25 公里处为 −56.5 °C，随后升至 0.8 °C · 约占大气总质量的 20% · 水汽稀少 · 存在臭氧层</p>
+      </div>
+      <div class="card">
+        <h3>中间层</h3>
+        <p>上界高度 ≈ 80–90 公里 · 温度每公里下降 2.5–3 °C，直至 −90 °C · 约占大气总质量的 0.3% · 光化学反应，产生大气辉光现象</p>
+      </div>
+      <div class="card">
+        <h3>热层</h3>
+        <p>上界高度可达 800 公里 · 温度在约 200–300 公里处升至约 1,200 °C · 约占大气总质量的 0.05% · 是抵御宇宙天体的防护层 · 可观测到极光</p>
+      </div>
+      <div class="card">
+        <h3>散逸层</h3>
+        <p>上界高度 ≈ 2,000–3,000 公里 · 温度升至 2,000 °C（？） · 消散（逸散）区</p>
+      </div>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

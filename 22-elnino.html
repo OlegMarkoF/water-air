@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triptych El Niño | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Triptych Panel <em>El Niño</em></h1>
+      <p class="meta">Henrika Bartkutė · Oil and mixed media on canvas · 2023 Kaliningrad, Russia</p>
+
+      <div class="card">
+        <h3>Normal Conditions <span class="meta">(Spanish: Condición normal)</span></h3>
+        <p>The coast of Peru is washed by the Peru Current (Humboldt Current). It carries cold, nutrient-rich waters from Antarctica toward the equator, fuelling abundant plankton blooms and attracting vast schools of fish. Steady easterly trade winds push the warm surface layer of water westward from South America toward Indonesia. Sea surface temperatures near Indonesia reach 29–30 °C, while waters off Peru remain a cool 22–24 °C.</p>
+      </div>
+      <div class="card">
+        <h3>El Niño <span class="meta">(Spanish: “little boy”)</span></h3>
+        <p>Every 2 to 8 years, El Niño arrives and transforms the Pacific: the trade winds weaken, atmospheric circulation patterns over the equator shift, and surface waters in the central and eastern Pacific warm by 1 to 2.5 °C above normal. Because the Pacific covers a third of Earth’s surface, this massive redistribution of heat disrupts weather worldwide — driving up global average air temperatures and altering precipitation patterns. Torrential rains flood Peru, while Indonesia and nations across the western Pacific experience severe drought.</p>
+      </div>
+      <div class="card">
+        <h3>La Niña <span class="meta">(Spanish: “little girl”)</span></h3>
+        <p>Typically a year or two after El Niño, La Niña arrives. The opposite of her warm ‘brother,’ she exerts a cooling effect on Earth’s climate. Surface water temperatures across the central and eastern Pacific drop. Steady easterly trade winds intensify, pushing warm surface water away from the coasts of Peru and Chile toward Indonesia and Australia. Global average air temperatures decrease.</p>
+      </div>
+      <p class="meta">Diagram placeholders for thermocline / convective circulation can be inserted here by the museum team.</p>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>三联画《厄尔尼诺》</h1>
+      <p class="meta">巴特库特 · 布面油画，独创技法 · 2023年俄罗斯，加里宁格勒</p>
+
+      <div class="card">
+        <h3>正常状态 <span class="meta">（西班牙语：Condicion normal）</span></h3>
+        <p>秘鲁沿岸受秘鲁寒流影响。寒流自南极向赤道输送富含营养盐的冷水，促使浮游生物大量繁衍，鱼类在此聚集。稳定的东风信风，将南美洲沿岸的表层暖水推向印度尼西亚方向；印度尼西亚附近海水温度可达29-30℃，而秘鲁沿岸水温仅为22-24℃。</p>
+      </div>
+      <div class="card">
+        <h3>厄尔尼诺 <span class="meta">（西班牙语：El Niño —“小男孩”）</span></h3>
+        <p>每2‑8年厄尔尼诺现象便会到来，一切随之改变：信风减弱，赤道上空大气环流体系重构，太平洋中、东部表层海水温度较常年升高1‑2.5℃。太平洋占地球表面积三分之一，海洋热量重新分配会对全球天气产生影响。造成全球平均气温升高，降水格局发生改变。例如秘鲁会遭遇暴雨，而印度尼西亚及西太平洋国家则陷入干旱。</p>
+      </div>
+      <div class="card">
+        <h3>拉尼娜 <span class="meta">（西班牙语：La Niña —“小女孩”）</span></h3>
+        <p>通常在厄尔尼诺结束一至两年后，拉尼娜现象登场。它是温暖 “兄长” 厄尔尼诺的反面，对全球气候起到冷却作用。太平洋中、东部表层海水温度下降。稳定的东风信风增强，将秘鲁、智利沿岸的暖水推向印度尼西亚与澳大利亚方向。全球平均气温随之降低。</p>
+      </div>
+      <p class="meta">温跃层 / 对流环流示意图可由博物馆团队在此插入。</p>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

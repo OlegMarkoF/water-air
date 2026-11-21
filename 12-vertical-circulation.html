@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Circulation | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Vertical Circulation</h1>
+      <p>Ocean water also moves vertically. Driven by density differences between surface and deep layers, water masses sink to the depths in some regions and rise toward the surface in others. Dense water always tends to sink, displacing surrounding water and forcing it upward. These vertical movements are extraordinarily slow, with the ascent of deep water taking decades or even centuries. Yet vertical circulation is vital: it continuously ventilates the ocean, sustaining its capacity for self-purification, while transporting nutrients that boost marine biological productivity.</p>
+
+      <div class="card">
+        <h3>Upwelling and Downwelling</h3>
+        <p>Wind pushes warm surface waters aside, allowing colder, deeper water to rise — this is upwelling. The sinking of surface waters is called downwelling. Upwelling zones rank among the world’s most productive commercial fishing grounds and are frequently found along the western coasts of continents (Peru–Chile, California, Benguela, Canary).</p>
+      </div>
+
+      <div class="card">
+        <h3>What Do the World Ocean and a Layer Cake Have in Common?</h3>
+        <p>Especially striking in the Arctic: a cold surface layer interacts with the atmosphere; beneath it lies the halocline (sharp salinity increase); below that flows warmer, saltier Atlantic water that forms a “warm filling”; and at the bottom rests even colder, high-salinity water.</p>
+      </div>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>垂直运动</h1>
+      <p>海水同样会发生垂直方向的位移。表层和深层海水存在密度差异，部分海域水体下沉，另一些区域水体向上抬升。密度大的水体趋向下沉，同时挤压其他水体向上运动。垂直运动的速度极其缓慢，水体上浮往往需要数十年乃至上百年。垂直运动意义重大：海水持续交换更新，保障海洋自净能力；营养盐随水体迁移，提升海域生物生产力。</p>
+
+      <div class="card">
+        <h3>上升流与下降流</h3>
+        <p>风力驱走表层暖水，促使更深层的冷水向上涌升，该现象称为上升流（涌升流）；表层海水下沉至深处则称为下降流（沉降流）。上升流海域是重要渔场，大多分布在大陆西岸：秘鲁‑智利上升流、加利福尼亚上升流、本格拉上升流、加那利上升流。</p>
+      </div>
+
+      <div class="card">
+        <h3>世界大洋和千层饼有什么相似之处？</h3>
+        <p>北冰洋这一特征尤为显著。最上层是与大气相互作用的冷水层；往下是盐跃层；盐跃层之下是来自大西洋的水体（温度更高，但盐度、密度更大）；海底附近则是一层温度更低、盐度更高的厚层海水。大西洋来源的水体在北冰洋中如同饼中间温热夹心。</p>
+      </div>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

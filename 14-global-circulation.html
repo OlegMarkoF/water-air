@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Ocean Circulation | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Global Ocean Circulation</h1>
+      <p>Uneven distributions of temperature and salinity across the ocean create variations in seawater density. These density differences drive the thermohaline circulation — a remarkably slow, ocean-spanning system often referred to as the global ocean conveyor belt.</p>
+      <p>In Earth’s high-latitude polar regions, surface waters cool, become dense enough to sink into the deep ocean, and flow horizontally toward the equator before rising back to the surface and returning poleward. Winds complete this cycle by driving surface water divergence, effectively “pumping” cold deep water back up to the surface. Together, wind-driven and thermohaline circulation form interconnected components of a single global ocean circulation system that maintains continuous exchange among all ocean basins.</p>
+
+      <div class="card">
+        <h3>Convergence Zones</h3>
+        <p>Areas where surface currents meet and water sinks (downwelling), typically forming where warm and cold waters collide. The largest is the Southern Subpolar (Antarctic) Convergence Zone between 50° and 60° S.</p>
+      </div>
+      <div class="card">
+        <h3>Divergence Zones</h3>
+        <p>Areas where surface currents move apart and deep water rises to the surface (upwelling), enriching the water with nutrients and creating vital commercial fishing grounds.</p>
+      </div>
+      <p class="meta">Record-breaking current: the Antarctic Circumpolar Current — the widest, coldest and longest current on Earth, carrying the largest volume of water and the only one to encircle an entire continent.</p>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>全球大洋环流</h1>
+      <p>海洋温度、盐度分布不均，造成海水密度差，驱动速度极慢、贯通全部大洋的全球温盐环流（“温”指温度，“盐”指盐度），也常被称作全球大洋传送带。</p>
+      <p>在地球高纬度极地海域，表层海水冷却、密度增大，向下沉降。沉降水体水平向赤道方向流动，之后抬升返回海面，再度流向极地。风完成这套循环的闭环：风力造成表层海水辐散，实际上把冷水“抽吸”回海面。因此风驱环流与温盐环流是大洋运动系统的两大组成部分，维系各个海盆之间持续的水体联系。</p>
+
+      <div class="card">
+        <h3>辐合带</h3>
+        <p>表层洋流汇聚、水体下沉的海域，多形成于冷暖水团交界。其中南副极地（南极）辐合带绵延最广，环绕地球南纬50°至60°之间。</p>
+      </div>
+      <div class="card">
+        <h3>辐散带</h3>
+        <p>表层海流散开，深层海水向上涌升；上涌水体携带丰富营养盐，是重要渔业作业海域。</p>
+      </div>
+      <p class="meta">纪录创造者：全球最宽、温度最低、流程最长、流量最大、唯一环绕整块大陆的洋流 —— 南极绕极流</p>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

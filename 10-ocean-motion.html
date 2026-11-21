@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Motion is Life | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Ocean Motion is Life</h1>
+      <blockquote class="quote">
+        Water is alive; it runs or ripples in the wind, it is ever in motion, giving life and movement to everything around it.
+        <cite>Sergei Aksakov</cite>
+      </blockquote>
+      <p>Swimming in the Baltic Sea, it is hard to imagine that the very water molecules around you once washed against the shores of Antarctica or Greenland, or rose in towering swells off the southern tip of Africa. Yet it is entirely possible. Currents — slow in some regions, swift in others — connect the most distant corners of the World Ocean.</p>
+      <p>Ocean circulation is shaped by the Earth’s rotation, the contours of the continents, seafloor topography, prevailing winds, and variations in seawater density, among other factors.</p>
+      <p>The ocean moves both horizontally and vertically, generating eddies and ocean rings, while surface waves are a constant feature across every basin. Though seemingly chaotic, this dynamic system governs the distribution and behaviour of marine life, regulates Earth’s climate system, and sustains the global economy.</p>
+      <div class="highlight">This ceaseless motion is the perpetual engine of our planet!</div>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>海洋的运动——生命</h1>
+      <blockquote class="quote">
+        水是富有生命的，它奔涌向前，或是被风浪激荡；水不停运动，赋予周遭万物生机与活力。
+        <cite>谢尔盖・阿克萨科夫</cite>
+      </blockquote>
+      <p>当你沐浴在波罗的海海水中时，很难想象，眼前的水分子，曾经冲刷过南极洲、格陵兰的海岸，又或许，曾在非洲大陆最南端掀起滔天巨浪。但这确有可能。有的洋流流速缓慢，有的则十分迅疾，它们将世界大洋最遥远的海域彼此连接。</p>
+      <p>大洋环流的特征由地球自转、大陆轮廓、海底地形、盛行风、海水密度差以及其他诸多因素共同决定。</p>
+      <p>海水存在水平运动与垂直运动。海洋中会产生涡旋与环涡，没有任何一片海域可以脱离波涛涌动。这套乍看杂乱无章的系统，影响着海洋生物的分布与生存方式，也深刻作用于地球气候系统与人类经济活动。</p>
+      <div class="highlight">永不停歇的海水运动，是这颗行星永动的引擎！</div>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

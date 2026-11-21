@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Wave — Homage to Hokusai | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>The Wave</h1>
+      <p class="meta">Homage to Katsushika Hokusai’s woodblock print <em>The Great Wave off Kanagawa</em> from the series <em>Thirty-Six Views of Mount Fuji</em><br>
+      Wood and recycled plastic · 2024 Russia, St. Petersburg</p>
+      <p>Before you is an artwork crafted from fragments of shredded plastic crates. Creating it required 60 kg of plastic flakes processed from 40 discarded crates. In this way, what was yesterday’s trash has been transformed into a work of art inspired by the iconic woodblock print by the great Japanese master Katsushika Hokusai.</p>
+      <p>Recovering secondary raw materials is a complex yet vital process that helps reduce human impact on the environment. It conserves natural resources and shrinks the footprint of landfills. Recycled materials are put to wide-ranging use: paper into office supplies; glass and metal into tableware and machinery components; plastic into pipes, insulation, storage containers, textile fibers and road surfaces. Artists and designers also work with recycled materials to create original works — serving as a reminder that anything can find a second life and a new form.</p>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>《浪》</h1>
+      <p class="meta">致敬葛饰北斋版画《神奈川冲浪里》，出自《富岳三十六景》系列<br>
+      木材、塑料 · 2024年俄罗斯，圣彼得堡</p>
+      <p>眼前这件作品由粉碎塑料箱的碎片拼接而成。创作这件艺术品一共使用了60公斤塑料碎料，由40个塑料容器回收加工得到。昔日的垃圾就此蜕变为艺术品。这件艺术作品的创作蓝本，是日本大师葛饰北斋的著名版画 ——《神奈川冲浪里》。</p>
+      <p>再生材料回收是一项复杂却意义重大的工艺，有助于降低人类活动对自然环境的影响。回收再利用既可以节约自然资源，又能够减少垃圾填埋场占地。再生材料拥有十分广泛的用途：再生纸可生产办公用品；再生玻璃、金属用来制作器皿与机械零部件；再生塑料可以加工成管道、保温材料、收纳容器、服装纤维以及路面铺装材料。不少艺术家与设计师也使用再生材料进行创作，打造独具一格的作品，以此提醒人们：万物皆可重获新生，焕发出全新形态。</p>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

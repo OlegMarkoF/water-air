@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Southern Ocean and the White Continent | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>The Southern Ocean and the White Continent</h1>
+      <p>At the opposite end of the world from the Arctic Ocean lies the Southern Ocean — the polar opposite of its northern counterpart. Completely open to the global ocean system, it connects with all other oceans through the Antarctic Circumpolar Current — the most powerful and longest current on Earth (~28,000 km), crossing every meridian on the globe. Here, continental shelves plunge far deeper than anywhere else, colossal icebergs drift, and winds sweep unimpeded across vast distances.</p>
+      <p>The Southern Ocean shoulders the immense burden of absorbing excess planetary heat and atmospheric carbon dioxide. It encircles and guards Antarctica — Earth’s largest glaciated region and highest continent (averaging 2,330 m above sea level), whose ice sheet locks away roughly 70% of the planet’s freshwater. Here, one of the greatest discoveries of the 20th century was made: subglacial Lake Vostok. Though inhospitable at first glance, the waters beneath the surface conceal a universe teeming with life — home to nearly ten thousand species, many found nowhere else on Earth.</p>
+      <p>Together, the Southern Ocean and the White Continent form a giant natural laboratory. Yet despite decades of scientific research, this region remains largely pristine — earning it the name the Last Ocean.</p>
+      <div class="card">
+        <ul>
+          <li>Weddell Sea — the clearest sea in the world (visibility up to 79 m)</li>
+          <li>Over 200,000 icebergs at any given time</li>
+          <li>World’s largest ice shelves — Ronne (300,000 km²) and Ross (487,000 km²)</li>
+          <li>‘Pole of Winds’ near Cape Burks — gusts up to 75 m/s (270 km/h)</li>
+          <li>Antarctica: driest and coldest continent (−89.2 °C in 1983), highest albedo (99%)</li>
+          <li>Belongs to no single nation; demilitarized zone; commercial mineral extraction prohibited</li>
+          <li>At Amundsen–Scott Station you can cross all 24 time zones in seconds</li>
+          <li>Hosts an annual 100-kilometre ice marathon</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>南大洋与白色大陆</h1>
+      <p>在距离北冰洋的地球另一端，延伸着南大洋——它是其极地兄弟的对立面。南大洋完全接入全球大洋系统，依靠全球势力最强、流程最长（约28,000千米）、横贯地球全部经线的南极绕极流，和其余各大洋彼此连通。这里大陆架深度要大得多，漂浮着地球上体积最大的冰山，海域遍布涡旋；气团可以长距离移动，全程不会受到任何陆地阻挡。</p>
+      <p>南大洋承担着重大使命，吸收地球多余热量以及大气当中的二氧化碳。它守护着地球最大冰川区、最高大陆（海拔2330米）——南极洲，其冰盖中封存着地球约70%的淡水。20世纪重大科学发现之一便诞生于此：沃斯托克冰下湖。乍看之下这里环境严酷，但海面之下，却是生机盎然的世界。近一万种生物在此栖息，其中大量物种为当地独有。</p>
+      <p>南大洋与白色大陆是一座巨型实验室，人类在此探索地球自然奥秘。尽管已经开展多年科考，这片区域依旧近乎保持原始状态，故而也被称作最后的大洋。</p>
+      <div class="card">
+        <ul>
+          <li>世界上最干净的海，水体透明度达79米——威德尔海</li>
+          <li>同时存在超过20万座冰山</li>
+          <li>世界上最大的冰架——龙尼冰架和罗斯冰架</li>
+          <li>“风极”——风速可达75米/秒或270公里/小时</li>
+          <li>南极洲是最干燥、最寒冷的大陆：-89.2°C（1983年），反照率最高——达99%</li>
+          <li>南极洲不属于任何国家，是非军事化区域，禁止开采矿产</li>
+          <li>在阿蒙森-斯科特站，可以在几秒钟内跨越24个时区</li>
+          <li>南极洲每年举办冰上马拉松——100公里滑雪赛</li>
+        </ul>
+      </div>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

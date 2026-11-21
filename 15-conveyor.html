@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Ocean Conveyor Belt | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Ocean Circulation</h1>
+      <p>The Global Ocean Conveyor Belt hypothesis explains the core principles of ocean water circulation from the surface to the seafloor. This museum installation offers a simplified representation of that three-dimensional system, highlighting two “coolers” in the North Atlantic and the Antarctic alongside a single “heater” in the low latitudes of the World Ocean (the tropical–equatorial zone).</p>
+
+      <div class="card">
+        <h3>Deep-water formation</h3>
+        <p><strong>North Atlantic:</strong> Labrador Sea, Norwegian Sea, Greenland Sea.<br>
+        <strong>Antarctic:</strong> Ross Sea, Adélie Coast, southern and western Weddell Sea, Amery Ice Shelf.</p>
+      </div>
+      <div class="card">
+        <h3>Upwelling</h3>
+        <p>Occurs around the entire Antarctic ring.</p>
+      </div>
+
+      <h2>The Global Ocean Conveyor Belt (GOC)</h2>
+      <ol>
+        <li>Influences Earth’s climate and its variability.</li>
+        <li>“Switches on” in the high southern latitudes.</li>
+        <li>Driven by variations in seawater density and winds along the southern edge of the Antarctic Circumpolar Current.</li>
+        <li>The classic GOC hypothesis does not incorporate water circulation within the Arctic Ocean.</li>
+        <li>Its circulation pathway truly resembles a giant conveyor belt.</li>
+        <li>While the Earth completes a rotation in 24 hours, water takes hundreds or even thousands of years to complete a full circuit along the conveyor belt.</li>
+      </ol>
+      <div class="highlight">Walk across the floor of the World Ocean, where the main branches of the ocean conveyor belt come to life around you!</div>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>大洋环流</h1>
+      <p>全球大洋传送带假说阐释了海水从海面至海底的环流主要原理。本次博物馆装置是这套三维运动系统的简化演示模型，模型包含：两处“制冷区”——北大西洋与南极；一处“加热区”—— 世界大洋低纬度区域（热带-赤道带）。</p>
+
+      <div class="card">
+        <h3>海水下沉区域</h3>
+        <p><strong>北大西洋：</strong>拉布拉多海、挪威海、格陵兰海。<br>
+        <strong>南极：</strong>罗斯海、阿代尔海岸、威德尔海南部与西部海域、埃默里冰架。</p>
+      </div>
+      <div class="card">
+        <h3>海水上涌区域</h3>
+        <p>分布于整个南极环带。</p>
+      </div>
+
+      <h2>全球大洋传送带</h2>
+      <ol>
+        <li>影响地球气候及其多变性。</li>
+        <li>在南半球高纬度海域“启动”。</li>
+        <li>驱动力来自大洋内部海水密度差异，以及南极绕极流南缘的风力作用。</li>
+        <li>当前全球大洋传送带假说并未纳入北冰洋水体环流。</li>
+        <li>大洋传送带示意图形态确实如同传送带的带状结构。</li>
+        <li>地球自转一周仅需24小时，而水体完成一轮传送带循环，却需要数百年乃至上千年。</li>
+      </ol>
+      <div class="highlight">请漫步于世界大洋的海底，大洋传送带各主干环流将在你周遭鲜活呈现！</div>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

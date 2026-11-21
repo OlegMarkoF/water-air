@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Great Ocean — Pacific | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>The Great Ocean — Pacific</h1>
+      <p>Before us lies the Pacific — the largest, most perilous, yet breathtaking ocean on Earth. Covering half of the entire World Ocean and spanning every hemisphere, it is the deepest ocean basin, its waters concealing the famous Mariana Trench. Here, moisture-laden summer monsoons bring torrential rains, while fierce storms and typhoons batter the shores of Eurasia.</p>
+      <p>Along its perimeter, the Pacific is ringed by island arcs, deep-sea trenches, and coastal mountain ranges that together form the Ring of Fire — a zone of intense seismic activity marked by frequent earthquakes, volcanic eruptions, and tsunamis. The Great Ocean is dotted with countless islands — tropical and icebound, densely populated and uninhabited — and is home to the world’s largest concentration of them: Oceania.</p>
+      <p>Off its South American coast lies the world’s best-known and most powerful upwelling system, the Peru–Chile upwelling. Every few years, the El Niño phenomenon develops off the coast of South America, reshaping global weather patterns.</p>
+      <p>The Pacific leads all oceans in marine fisheries and aquaculture, accounting for roughly 60% of the global catch. Almost 50 nations border the Pacific Rim, alongside major global economic hubs — Tokyo, Shanghai, Singapore, Seoul, and Sydney — and 9 of the world’s 10 largest commercial ports.</p>
+      <div class="card">
+        <ul>
+          <li>Covers a greater area than all of Earth’s continents combined</li>
+          <li>Considered the oldest of the world’s modern oceans</li>
+          <li>Hosts the Coral Triangle, a paradise for divers</li>
+          <li>Rivers discharge roughly 30,000 km³ of freshwater each year</li>
+          <li>The International Date Line runs through it</li>
+          <li>Over 50% of the world’s population lives in the Pacific Rim</li>
+          <li>A 1-kg steel ball dropped over the Mariana Trench would take more than an hour to reach the seafloor</li>
+          <li>Named in 1520 by Ferdinand Magellan, who crossed it without encountering a storm</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>浩瀚大洋 —— 太平洋</h1>
+      <p>呈现在我们眼前的太平洋，广袤辽阔、暗藏凶险，却又无比壮美。它的面积占到整个世界大洋的一半，横跨全部半球。它是世界最深的大洋，马里亚纳海沟就隐匿于它的海水之下。夏季，湿润的季风在此带来丰沛降水，风暴与台风频频侵袭欧亚大陆沿岸。</p>
+      <p>大洋周边环绕着岛弧、深海海沟，陆地上则分布着山脉，共同构成“火环”，这里地震、火山喷发、海啸发生最为频繁。浩瀚的太平洋岛屿星罗棋布：既有热带岛屿，也有冰封海岛；既有人口稠密之地，也有无人荒岛。全球规模最大的岛群——大洋洲，就坐落于此。</p>
+      <p>太平洋沿岸拥有全球最负盛名、强度最大的深层水上涌区域——秘鲁‑智利上升流。每隔数年，南美洲沿岸便会出现厄尔尼诺现象。它会影响全球气候，例如造成澳大利亚干旱、智利洪水泛滥。</p>
+      <p>太平洋的海洋捕捞与水产养殖规模位居各大洋首位，全球约60%的渔获量出自这里。太平洋地区分布有约50个国家，汇聚东京、上海、新加坡、首尔、悉尼等全球商业中心；全球十大贸易港口当中，有九座位于该区域。</p>
+      <div class="card">
+        <ul>
+          <li>太平洋面积大于地球上全部大陆面积之和</li>
+          <li>被认为是现存大洋中最为古老的大洋</li>
+          <li>“珊瑚三角区”—— 潜水爱好者的天堂</li>
+          <li>每年各大河流汇入太平洋水量约30,000立方米</li>
+          <li>国际日期变更线横穿太平洋水域</li>
+          <li>太平洋地区居住着全球50%以上人口</li>
+          <li>若向马里亚纳海沟抛下1千克重的钢球，钢球沉落至海底需要一小时以上</li>
+          <li>该大洋的名称由葡萄牙航海家费尔南·麦哲伦于1520年命名</li>
+        </ul>
+      </div>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

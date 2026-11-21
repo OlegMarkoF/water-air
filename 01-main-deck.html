@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water and Air Laboratory | Main Deck</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Water and Air Laboratory — Main Deck of the Museum of the World Ocean">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">
+          Water &amp; Air Lab
+          <span>Museum of the World Ocean</span>
+        </div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <!-- EN -->
+    <article class="lang-content active" data-lang="en">
+      <h1>The Water and Air Laboratory</h1>
+      
+      <blockquote class="quote">
+        Water and air, the two essential fluids on which all life depends…
+        <cite>Jacques-Yves Cousteau</cite>
+      </blockquote>
+
+      <p class="lead">Welcome to the Main Deck — home to the Water and Air Laboratory. These two elements form the very foundation of our existence, and now is the time to discover more about them.</p>
+      
+      <p>Water is the most extraordinary substance known to humanity. Most of it is concentrated in the World Ocean, whose waters are divided by continents and major archipelagos into five distinct basins: the Atlantic, Pacific, Indian, Arctic, and Southern Oceans. Each possesses its own unique character, yet all share one defining trait — ceaseless motion through currents, waves, and eddies.</p>
+      
+      <p>Our planet also holds a second ocean — an ocean of air. This is Earth’s atmosphere: thin, transparent, and seemingly weightless. Yet it is our true home, and together with the World Ocean, it shoulders the immense responsibility of sustaining life on Earth.</p>
+      
+      <p>The World Ocean is a colossal source of energy and resources, a vital global shipping artery, and the birthplace of our weather. Here, you will explore the ocean-driven processes and phenomena that shape our daily lives, discover the history of aeronautics and shipbuilding, examine pressing environmental challenges and their solutions, and learn how humanity can interact with nature without harming our planet’s hydrosphere and atmosphere.</p>
+      
+      <div class="highlight">
+        Love testing the limits of the world around you?<br>
+        Try out our interactive exhibits instead — and bring the oceans closer than ever!
+      </div>
+    </article>
+
+    <!-- ZH -->
+    <article class="lang-content" data-lang="zh">
+      <h1>水与空气实验室</h1>
+      
+      <blockquote class="quote">
+        水与空气，维系一切生命的两大基本要素……
+        <cite>雅克‑伊夫・库斯托</cite>
+      </blockquote>
+
+      <p class="lead">您现在身处主甲板，也就是“水与空气实验室”。正是这两种物质构成了我们生存的基础。接下来让我们进一步了解它们。</p>
+      
+      <p>水是人类已知最为奇妙的物质。绝大部分水汇集于世界大洋，大陆与大型群岛把大洋水域划分为五大洋：大西洋、太平洋、印度洋、北冰洋与南大洋。每一片大洋都拥有独一无二的特质，但有一点是共通的 —— 永不停歇的运动：洋流、海浪、涡旋。</p>
+      
+      <p>我们的星球上还有另外一片 “大洋”—— 空气之洋，也就是大气层。它稀薄通透，乍看仿佛没有重量。但它正是我们赖以生存的家园，和世界大洋一同肩负着维系地球生命的重大使命。</p>
+      
+      <p>世界大洋是巨大的能源与资源宝库，是交通运输大动脉，也是天气的“诞生之地”。让我们一同去认识由海洋所决定的各类生命过程与自然现象；了解航空与船舶制造；探讨生态问题并思考解决途径；努力探寻如何与自然共处，不去破坏地球的水圈与大气圈。</p>
+      
+      <div class="highlight">
+        喜欢检验世界的坚固程度吗？<br>
+        不妨来体验我们的实验装置！海洋将离你不再遥远！
+      </div>
+    </article>
+
+    <footer class="site-footer">
+      Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => {
+          c.classList.toggle('active', c.dataset.lang === lang);
+        });
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

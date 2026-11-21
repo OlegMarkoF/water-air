@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atmospheric Heat Engine | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>The Atmospheric Heat Engine</h1>
+      <blockquote class="quote">
+        Immense is the importance of air to life: without food and drink a person can survive for several days, but without air, for only a few moments.
+        <cite>Hippocrates</cite>
+      </blockquote>
+      <p>The ocean of air is an inseparable part of our lives: not water and not land, but the atmosphere is our true home. We tend to think of air as weightless, yet the weight of an atmospheric column at sea level is roughly 10.3 metric tons per square meter. Half of its mass is concentrated within a thin layer just 5 to 6 kilometres thick — compared to Earth’s radius of just over 6,000 kilometres, the skin of an apple is proportionally thicker than our gaseous envelope.</p>
+      <p>On a global scale, air movement follows a clear pattern governed by general atmospheric circulation. In this system, the Sun acts as the firebox, the equator serves as the steam boiler, and the white polar ice caps act as the condensers.</p>
+      <p>Solar radiation warms the air near the equator; the air becomes less dense and rises, then flows toward the polar condensers, cools, sinks, and returns toward the equator along the surface. This idealized model is complicated by the Earth’s rotation and the Coriolis effect, as well as differential heating between continents and oceans.</p>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <div class="section-label"> 码 №16</div>
+      <h1>大气热机</h1>
+      <blockquote class="quote">
+        空气对生命意义重大。人不吃不喝尚可存活数日，可一旦失去空气，生命转瞬即逝。
+        <cite>希波克拉底</cite>
+      </blockquote>
+      <p>空气的海洋是我们生活不可或缺的一部分：人类的家园并非江河大地，恰恰是大气层。我们习惯认为它很轻，但海平面处空气柱的重量约为10.3吨/平方米。大气层似乎无边无际，但其一半的质量集中在5–6公里厚的薄层中，而我们星球的半径略大于6,000公里：苹果皮都比空气外壳还要厚。</p>
+      <p>在全球尺度下，大气运动拥有清晰规律，这就是大气环流 —— 行星尺度的气流系统。太阳如同炉膛，赤道好比蒸汽锅炉，两极皑皑冰盖则充当制冷装置。</p>
+      <p>太阳的热量加热赤道地区空气，空气变轻向上抬升，之后向两极“制冷装置”流动，冷却下沉，再沿地表向赤道回流。巨大的空气轮盘就这样循环转动。但这套理想模式会因地球自转、科里奥利力效应变得复杂。</p>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

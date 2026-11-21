@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Will Save the World | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>Beauty Will Save the World</h1>
+      <blockquote class="quote">
+        Water is the beauty of all nature.
+        <cite>Sergei Aksakov</cite>
+      </blockquote>
+      <p>Alongside science, art serves as a vital means of understanding the world. Through artistic representation, we achieve a deeper grasp of true natural and social reality. The idealized world of art is constructed from distinct “building blocks” — the poetic word, melody, rhythm, line and other expressive forms — that often prove to be even more powerful instruments for comprehending reality than the concepts, propositions and theories of science. Art’s rich capacity to convey meaning stems from the fact that its forms deliver knowledge to people in a fundamentally different way.</p>
+      <div class="highlight">We invite you to explore works of painting that allow us, for instance, to trace changes in the state of the natural world.</div>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>美将拯救世界</h1>
+      <blockquote class="quote">
+        水，是整个大自然之美。
+        <cite>谢尔盖・阿克萨科夫</cite>
+      </blockquote>
+      <p>艺术与科学一样，都是认识世界的手段。借助艺术形象，人们可以更加深刻地理解真实的自然现实与社会现实。艺术所构建的理想世界依靠独特的 “构筑载体” 来实现：诗的语言、旋律、节奏、绘画以及其他表现形式。这些认知现实的工具，其效果往往不亚于科学所使用的概念、判断与理论。艺术具备极高的信息承载能力，因为它以别样的形式向人们传递知识。</p>
+      <div class="highlight">我们邀请您欣赏绘画作品，借助这些画作，我们便可以观察自然状态发生的种种变化。</div>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>

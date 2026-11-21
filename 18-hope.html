@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What May I Hope For? | Water & Air Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="01-main-deck.html" class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">Water &amp; Air Lab<span>Museum of the World Ocean</span></div>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article class="lang-content active" data-lang="en">
+      <h1>What May I Hope For?</h1>
+      <blockquote class="quote">
+        It is not nature that needs our protection; rather, it is we who need nature’s stewardship: clean air to breathe, crystal-clear water to drink, and all of nature simply to live.
+        <cite>Nikolai Reimers</cite>
+      </blockquote>
+      <h2>Ocean Crises Are Human Crises</h2>
+      <p>On our planet, all living and non-living elements interact with one another. Every action we take triggers a response in the natural world. We must consider how to adapt to the consequences of natural processes while finding ways to reduce our anthropogenic impact on the environment.</p>
+      <p>Industrial development is driven by the massive consumption of natural resources and the generation of vast amounts of waste, leading to severe pollution of both the ocean and the atmosphere. These two Earth spheres are in constant interaction — shifts in one inevitably alter the other.</p>
+      <p>Our atmosphere is suffocating from rising greenhouse gas concentrations. The scarcity of clean, potable freshwater is one of the most pressing global challenges of our time.</p>
+      <div class="highlight">Water and air quality = quality of life<br>Harmonious interaction with the oceans is the only sustainable path forward for humanity.</div>
+    </article>
+
+    <article class="lang-content" data-lang="zh">
+      <h1>我可以怀抱何种希望？</h1>
+      <blockquote class="quote">
+        需要被保护的并非大自然，恰恰是我们人类需要大自然的庇护：洁净的空气供我们呼吸，澄澈的水源供我们饮用，整个大自然，供我们赖以生存。
+        <cite>尼古拉・赖默斯</cite>
+      </blockquote>
+      <h2>海洋问题即人类的问题</h2>
+      <p>在我们的星球上，一切生命与非生命事物都会在一定程度上相互影响。人类尤其如此，人类的任何行为都会引发环境的反馈。我们应当思考，如何接纳自然进程带来的后果，以及应当做些什么，来降低人为活动给环境带来的负荷。</p>
+      <p>人类文明的工业化发展伴随着自然资源的巨大消耗，同时产生大量废弃物，造成海洋与大气污染。地球的这两大圈层持续相互作用，其中一方指标发生变化，就会引发另一方随之改变。</p>
+      <p>大气这一“空气海洋”因温室气体含量升高而不堪重负。洁净的饮用淡水短缺，是当代全球性难题之一。</p>
+      <div class="highlight">水与空气的质量 = 生活的质量<br>与海洋和谐共处——文明发展唯一正确的方向</div>
+    </article>
+
+    <footer class="site-footer">Museum of the World Ocean · <a href="https://www.world-ocean.ru" target="_blank" rel="noopener">world-ocean.ru</a></footer>
+  </div>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(c => c.classList.toggle('active', c.dataset.lang === lang));
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      });
+    });
+  </script>
+</body>
+</html>
