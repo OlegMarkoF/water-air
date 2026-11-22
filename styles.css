@@ -228,10 +228,13 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* padding: 1.1rem 1.25rem; */
 }
 
 .flex-center img {
   width: 100%;
+  border-radius: 22px;
+  margin-bottom: 16px;
 }
 
 .data-item {
